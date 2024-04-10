@@ -52,7 +52,7 @@
         {
             "language": "typescript",
             "source": [
-                "let anyType\r\nlet typeString:string\r\nlet typeNumber:number\r\nlet typeBool:boolean\r\nlet typeObj:object\r\nlet typeNull:null\r\nlet typeUndefined:undefined"
+                "let anyType\nlet typeString:string\nlet typeNumber:number\nlet typeBool:boolean\nlet typeObj:object\nlet typeNull:null\nlet typeUndefined:undefined"
             ],
             "outputs": []
         },
@@ -66,7 +66,7 @@
         {
             "language": "typescript",
             "source": [
-                "anyType=\"1\"\r\nanyType=123\r\nanyType={id:2}"
+                "anyType=\"1\"\nanyType=123\nanyType={id:2}"
             ],
             "outputs": [
                 {
@@ -2143,7 +2143,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Answer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                "//Answer\n\ntype CTStudent = {\n    id: string;\n    name: string;\n    age: number;\n    isTired: boolean;\n    projectsCompleted: string[];\n    pet?: string;\n};\n\nlet student1: CTStudent = {\n    id: 'GMK435&g62L00',\n    name: 'John Smith',\n    age: 24,\n    isTired: true,\n    projectsCompleted: [\"HTML Portfolio\", \"Fakebook\", \"Pokemon API Project\", \"Weather Bug\"],\n    pet: 'dog'\n};\n\nlet student2: CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Jenny Hawthorne',\n    age: 28,\n    isTired: false,\n    projectsCompleted: [\"HTML Portfolio\"],\n};\n\nlet student3: CTStudent = {\n    id: '6KGS%54GmlY76',\n    name: 'Neo',\n    age: 57,\n    isTired: true,\n    projectsCompleted: [\"Matrix\", \"Biological Interface Program\"],\n    pet: 'cat'\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
             ],
             "outputs": []
         },
@@ -2164,7 +2164,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Given\ntype Fruit={\n    color:string,\n    shape:string\n}\n\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit=null\n\n//Answer"
+                "//Given\ntype Fruit={\n    color:string,\n    shape:string\n}\n\nlet apple:Fruit={color:\"red\", shape:\"sphere\"}\nlet eaten:Fruit=null\n\n//Answer\nfunction printFruitColor(fruit: Fruit | null): void {\n  if (fruit) {\n    console.log(fruit.color);\n  } else {\n    console.log(\"You ate my fruit already\");\n  }\n}\nprintFruitColor(apple);\nprintFruitColor(eaten);"
             ],
             "outputs": [
                 {
@@ -2198,7 +2198,7 @@
         {
             "language": "typescript",
             "source": [
-                "//Given \ntype Book={\n    isbn:string,\n    title:string,\n    author:string\n}\n\ntype DigitalBook={\n    fileType:string,\n}\n\n//Answer\n"
+                "//Given \ntype Book={\n    isbn:string,\n    title:string,\n    author:string\n}\n\ntype DigitalBook={\n    fileType:string,\n}\n\n//Answer\n\n\ntype Ebook = Book | DigitalBook;\n\nconst myEbook: Ebook = {\n    isbn: \"123456789\",\n    title: \"My Ebook\",\n    author: \"John Doe\"\n};\n"
             ],
             "outputs": []
         },
@@ -2219,7 +2219,7 @@
         {
             "language": "typescript",
             "source": [
-                "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                "enum Categories {\n    Shirts = \"Shirts\",\n    Shoes = \"Shoes\",\n    Pants = \"Pants\",\n    Hats = \"Hats\"\n}\n\ntype ShopItem = {\n    readonly id: number;\n    price: number;\n    description: string;\n    color?: string;\n    category: Categories;\n    keywords: string[];\n};\n\nconst item1: ShopItem = {\n    id: 1,\n    price: 29.99,\n    description: \"Blue T-Shirt\",\n    color: \"blue\",\n    category: Categories.Shirts,\n    keywords: [\"T-Shirt\", \"Blue\", \"Clothing\"]\n};\n\nconst item2: ShopItem = {\n    id: 2,\n    price: 49.99,\n    description: \"Red Shoes\",\n    color: \"red\",\n    category: Categories.Shoes,\n    keywords: [\"Shoes\", \"Red\", \"Footwear\"]\n};\n\nconst item3: ShopItem = {\n    id: 3,\n    price: 39.99,\n    description: \"Black Pants\",\n    category: Categories.Pants,\n    keywords: [\"Pants\", \"Black\", \"Bottoms\"]\n};\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
             ],
             "outputs": []
         }
